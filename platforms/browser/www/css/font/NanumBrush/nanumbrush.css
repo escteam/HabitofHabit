@@ -1,0 +1,13 @@
+/* nanum-brush-script-regular - latin */
+@font-face {
+  font-family: 'nb';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./nanum-brush-script.eot'); /* IE9 Compat Modes */
+  src: local('nb'), local('NanumBrush'),
+       url('./nanum-brush-script.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./nanum-brush-script.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./nanum-brush-script.woff') format('woff'), /* Modern Browsers */
+       url('./nanum-brush-script.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./nanum-brush-script.svg#NanumBrushScript') format('svg'); /* Legacy iOS */
+}

@@ -1,0 +1,32 @@
+@font-face {
+ font-family: 'ng';
+ font-weight: 400;
+ src: url(NanumGothicR.eot);
+ src: url(NanumGothicR.eot?#iefix) format('embedded-opentype'),
+      url(NanumGothicR.woff) format('woff'),
+      url(NanumGothicR.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'ng_b';
+ font-weight: 700;
+ src: url(NanumGothicBold.eot);
+ src: url(NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+      url(NanumGothicBold.woff) format('woff'),
+      url(NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'ng_eb';
+ font-weight: 800;
+ src: url(NanumGothicExtraBold.eot);
+ src: url(NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
+      url(NanumGothicExtraBold.woff) format('woff'),
+      url(NanumGothicExtraBold.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'ng_l';
+ font-weight: 300;
+ src: url(NanumGothicLight.eot);
+ src: url(NanumGothicLight.eot?#iefix) format('embedded-opentype'),
+      url(NanumGothicLight.woff) format('woff'),
+      url(NanumGothicLight.ttf) format('truetype');
+}

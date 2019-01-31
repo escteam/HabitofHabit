@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+  <!--
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  -->
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+  <!-- -->
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/MDB.4.7.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="vendor/MDB.4.7.0/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link href="vendor/circle-progress/style.css" rel="stylesheet">
+
+    <!-- font -->
+    <link rel="stylesheet" type="text/css" href="css/font/iconfont/material-icons.css"  />
+    <link rel="stylesheet" type="text/css" href="css/font/NanumSquare/nanumsquare.css"  />
+
+
+    <title>습관의습관화</title>
+
+</head>
+
+<body>
+
+
+  <div id="intro" class="page">
+    <div class="container">
+      <div class="cover">
+        <div class="cover_int">
+          <div class="text">
+        <h1>
+          <span>습관<small>의</small></span>
+          <b>습관</b>화
+        </h1>
+        <div class="eng_title">
+          Habbit of Habbit
+        </div></div>
+        </div>
+      </div>
+
+<!--
+        <div id="deviceready" class="blink text-center hide">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+-->
+        <button type="button" onClick="pageGo('#main','left')" class="start_btn btn btn-blue-grey waves-effect waves-light btn-block"><i class="material-icons">public</i> START </button>
+        <div class="copyright">
+          © 2019 banbaji
+        </div>
+    </div>
+  </div>
+
+  <div id="main" class="page">
+     <div class="panel_box">
+       <div class="now">
+         <div class="now_box">
+           <div class="now_date">0000.00.00</div>
+           <div class="now_time">00:00<span class="sec">: 00</span><sup>AM</sup>
+           </div>
+         </div>
+       </div>
+    </div>
+
+
+  <div class="circles">
+    <div class="first circle">
+      <span>no <br> animation</span>
+    </div>
+    <div class="second circle">
+      <strong></strong>
+      <span>animation <br> progress</span>
+    </div>
+    <div class="third circle">
+      <strong>1</strong>
+      <span>value <br> progress</span>
+    </div>
+    <div class="forth circle">
+      <span>custom angle, <br> value update</span>
+    </div>
+    <div
+      class="fifth circle"
+      data-value="0.9"
+      data-size="60"
+      data-thickness="20"
+      data-animation-start-value="1.0"
+      data-fill="{
+        &quot;color&quot;: &quot;rgba(0, 0, 0, .3)&quot;,
+        &quot;image&quot;: &quot;http://i.imgur.com/pT0i89v.png&quot;
+      }"
+      data-reverse="true"
+    >
+      <span>image fill, <br> custom sizes</span>
+    </div>
+  </div>
+
+</div>
+
+  <script type="text/javascript" src="vendor/MDB.4.7.0/js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="vendor/MDB.4.7.0/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="vendor/MDB.4.7.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="vendor/MDB.4.7.0/js/mdb.js"></script>
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
+
+    <script src="vendor/circle-progress/circle-progress.js"></script>
+
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script type="text/javascript" src="vendor/circle-progress/examples.js"></script>
+
+
+    <script type="text/javascript">
+        app.initialize();
+
+    setInterval("dpTime()", 1000);
+
+	$(document).ready(function(){
+	//	jQuery("#workPlace").text( "${workInfo.PNAME}");
+	});
+
+
+
+    function dpTime() {
+
+        var now = new Date();
+
+        year = now.getFullYear();
+        month = now.getMonth() + 1;
+        day = now.getDate();
+        hours = now.getHours();
+        minutes = now.getMinutes();
+        seconds = now.getSeconds();
+
+        if (hours > 12) {
+          hours -= 12;
+          ampm = "PM";
+        } else {
+          ampm = "AM";
+        };
+
+        if (month < 10) {
+          month = "0" + month;
+        };
+
+        if (day < 10) {
+          day = "0" + day;
+        };
+
+        if (hours < 10) {
+          hours = "0" + hours;
+        };
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        };
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        };
+        var nowDate = year + "." + month + "." + day;
+
+        var nowTime = hours + ":" + minutes + "<span class='sec'>: " + seconds + "</span><sup>" + ampm + "</sup>";
+
+        $(".now_date").html(nowDate);
+        $(".now_time").html(nowTime);
+        $(".now_time").animate({
+          opacity: 1
+        }, 100, function() {
+        });
+      }
+
+
+        function pageGo(id,type){
+
+          $(".page").css("z-index","0")
+          $(".page").animate({
+            opacity:["0.8","swing"]
+          }, 100, function() {
+            $(".page").css("display","none")
+            if (type == "down") {
+
+              $(id).css("opacity","1")
+              $(id).css("top","+=100%")
+              $(id).css("display","block")
+              $(id).css("z-index","10")
+              $(id).animate({
+                top:["0","swing"]
+              }, 400, function() {
+                $(id).css("position","relative")
+              });
+            }
+            else if (type == "left") {
+              $(id).css("opacity","1")
+              $(id).css("left","100%")
+              $(id).css("display","block")
+              $(id).css("z-index","10")
+              $(id).animate({
+                left:["0","swing"]
+              }, 400, function() {
+                $(id).css("position","relative")
+              });
+            }
+            if (id == "#main"){
+              circle()
+            }
+
+          });
+
+        }
+
+    </script>
+
+</body>
+</html>
